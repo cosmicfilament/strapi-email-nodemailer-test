@@ -3,10 +3,10 @@ module.exports = ({ env }) => ({
 		provider: 'nodemailer-v3',
 		providerOptions: {},
 		settings: {
-			host: 'smtp.gmail.com',
-			port: 587,
-			username: 'john@thecosmicfilament.com',
-			password: 'kweyinazldgxfzvh',
+			host: env('EMAIL_HOST', 'smtp.gmail.com'),
+			port: env.int('EMAIL_PORT', 587),
+			username: env('EMAIL_USER', 'johnqpublic@gmail.com'),
+			password: env('EMAIL_PASSWD', 'password123'),
 			secure: false
 		}
 	}

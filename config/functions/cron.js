@@ -23,8 +23,8 @@ module.exports = {
 			const send = await strapi.plugins['email'].services.email.send({
 				to: 'john@thecosmicfilament.com',
 				from: 'john@thecosmicfilament.com',
-				subject: 'strapi on drugs',
-				text: 'blah blash blah strapi strapi strapi drugs drugs drugd'
+				subject: 'strapi nodemailer is working',
+				text: 'this is a test of the strapi nodemailer thang'
 			});
 		} catch (error) {
 			console.log('error: ', error, JSON.stringify(error));
